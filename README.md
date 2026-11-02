@@ -12,7 +12,11 @@ python3 server.py
 
 Åbn http://localhost:8000 i browseren. Stop serveren med Ctrl+C.
 
-## Se hvem der kommer
+## Fiktiv reservation
+
+Formularen viser en kort venteanimation og en animeret bekræftelse lokalt i browseren. Den sender ingen reservation og gemmer ingen oplysninger. Det virker også uden Python-serveren, fx på GitHub Pages.
+
+## Serverens gæsteliste (bruges ikke af demoformularen)
 
 Åbn en ny terminal i samme mappe:
 
@@ -26,7 +30,7 @@ Eksporter en gæsteliste, der kan åbnes i Excel:
 python3 server.py --export
 ```
 
-Reservationer bliver gemt i `data/reservations.sqlite3`, også efter genstart. Navne og allergioplysninger vises ikke offentligt. Serveren skal køre for at tage imod reservationer. Åbning af HTML-filen alene eller med VS Code Live Server viser designet, men kan ikke gemme reservationer.
+Reservationer bliver gemt i `data/reservations.sqlite3`, også efter genstart. Navne og allergioplysninger vises ikke offentligt. Serverens API kræver Python-serveren; demoformularen bruger ikke dette API.
 
 ## Del med vennerne
 
