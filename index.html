@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Åbner Butter Club …</title>
+  <script>
+    const local = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
+    const destination = local
+      ? new URL('http://' + location.hostname + ':8000/')
+      : new URL('public/', location.href);
+    destination.hash = location.hash;
+    location.replace(destination.href);
+  </script>
+</head>
+<body>
+  <p>Åbner Butter Club …</p>
+  <p><a href="http://127.0.0.1:8000/">Åbn den lokale hjemmeside</a></p>
+  <noscript>Aktivér JavaScript, eller brug linket ovenfor.</noscript>
+</body>
+</html>
