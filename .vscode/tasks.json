@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Butter Club",
+      "type": "process",
+      "command": "python3",
+      "args": ["server.py"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Vis gæstelisten",
+      "type": "process",
+      "command": "python3",
+      "args": ["server.py", "--list"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}
