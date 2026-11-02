@@ -1,0 +1,9 @@
+.git
+.vscode
+data
+__pycache__
+*.pyc
+*.sqlite3
+gaesteliste.csv
+.env
+.env.*
