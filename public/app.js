@@ -21,7 +21,7 @@ form.addEventListener('submit', async event => {
     const response = await fetch('/api/reservations', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({...values, id})});
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || 'Din reservation kunne ikke gemmes.');
-    document.querySelector('#confirmation-text').textContent = `${name}, der er gemt plads til ${values.guests} ${values.guests === 1 ? 'person' : 'personer'} kl. ${values.time}. Kom sulten — vi ses ved bordet!`;
+    document.querySelector('#confirmation-text').textContent = `Der er gemt plads til ${values.guests} ${values.guests === 1 ? 'person' : 'personer'} kl. ${values.time}. Kom sulten — vi ses i sofaen`;
     form.hidden = true;
     confirmation.hidden = false;
     confirmation.focus();
